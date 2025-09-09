@@ -1,6 +1,5 @@
-
-let alert = (prompt("what are your flavors?"));
-
-window.onload = function(){
-    alert("enter flavors");
-}
+window.onload = function(flavors) {
+    let userInput = prompt("enter flavors");
+    
+    console.log(userInput);
+};
