@@ -1,22 +1,24 @@
 // prompt user to eneter froyo flavors upon loading the page
-window.onload = function(froyoFlavors) {
-    let flavorTotal = prompt("enter flavors");
-    console.log(flavorTotal);
-    let arr = flavorTotal.split(",");
-    console.log(arr);
-};
-
-let arr = 0;
-for (arr = 0; arr < flavorTotal.length; arr++) {
-    console.log(flavors[arr]);
-} 
-
-let flavorTotal = {
+window.onload = function() {
+    let input = prompt("enter flavor");
+    let array = input.split(',');
+    let flavorTotal = {
     "coffee": 0,
     "vanilla": 0,
     "strawberry": 0,
-}
-for (flavorTotal in flavors) {
-    console.log(Object.value["vanilla"])
 };
-
+// count froyo flavors 
+for (let i = 0; i < array.length; i++) {
+    let flavor = array[i];
+    if (flavorTotal.hasOwnProperty(flavor)){
+        flavorTotal[flavor] += 1;
+        console.log(flavorTotal);
+    }
+}   
+console.log(flavorTotal);
+}
+ function printFlavorReport(flavorTotal){
+    for (let flavor in flavorTotal){
+        console.log(`$flavor: ${flavorTotal[flavor]}`);
+    }
+ }
